@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Views.AboutPage"
+             xmlns:vm="clr-namespace:App4.ViewModels;"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add to Diary" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <StackLayout Margin="20" Orientation="Vertical">
+                <Button Text="Take Photo" Clicked="Button_Clicked" />
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="emotion" >
+                    </Label>
+                </StackLayout>
+                <Image x:Name="photo" Aspect="AspectFit"/>
+            </StackLayout>
+        </ScrollView>
+  </Grid>
+</ContentPage>
